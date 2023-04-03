@@ -12,3 +12,8 @@ then download
 3-IC-Info.sisv
 
 if you need buy the php or need more instructions contact me : https://t.me/gsmadjaa05/
+
+
+SUPPORT ME IN MY WORK BY MAKING A DONATION :
+
+PAYMENT METHODE : USDT TRC20 TT8iA23VWtD4xBMCwTX9VrCfQVaouapPRN
