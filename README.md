@@ -5,7 +5,7 @@ use curl or activation from libimobile device then handle this request :
 api link no sn change bypass : https://gsmadjaa.xyz/public/checkm8.php?sn=yoursn&ucid=yourucid&udid=yourudid
 api link fix ipad no SN change : https://gsmadjaa.xyz/public/checkm8.php?sn=yoursn&ucid=yourucid&udid=yourudid
 after generated downloads these files from the server : 
-https://gsmadjaa.x10.bz/helloserver/NewActivation/
+https://gsmadjaa.xyz/public/NewActivation/
 then download 
 1-activation_record.plist
 2-commcenter.plist
