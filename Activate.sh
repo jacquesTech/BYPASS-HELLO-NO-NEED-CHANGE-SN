@@ -49,23 +49,21 @@ echo ''
 read -p 'IF YOUR SYSTEM IS MacOS, TYPE YOUR PASSWORD IN OTHER TERMINAL'
 
 # Execute commands on the remote device
-SshC 'mount_party' // # mount ramdisk
 SshC 'mount' // # mount jailbreak
-sshpass -p 'alpine' scp -p ./activation_files/activation_record.plist root@localhost:"/mnt1/"
-sshpass -p 'alpine' scp -p ./activation_files/IC-Info.sisv root@localhost:"/mnt1/"
-SshC '/bin/mv -f /mnt1/activation_record.plist /mnt2/root/'
-SshC '/bin/rm -rf /mnt2/mobile/Library/FairPlay'
-SshC '/bin/mkdir -p -m 00755 /mnt2/mobile/Library/FairPlay/iTunes_Control/iTunes'
-SshC '/bin/mv -f /mnt1/IC-Info.sisv /mnt2/root/'
-SshC '/bin/mv -f /mnt2/root/IC-Info.sisv /mnt2/mobile/Library/FairPlay/iTunes_Control/iTunes/'
-SshC '/bin/chmod 00664 /mnt2/mobile/Library/FairPlay/iTunes_Control/iTunes/IC-Info.sisv'
-SshC '/usr/sbin/chown -R mobile:mobile /mnt2/mobile/Library/FairPlay'
-SshC 'cd /mnt2/containers/Data/System/*/Library/internal/../ && /bin/mkdir -p activation_records'
-SshC 'cd /mnt2/containers/Data/System/*/Library/activation_records && /bin/mv -f /mnt2/root/activation_record.plist ./'
-SshC 'cd /mnt2/containers/Data/System/*/Library/activation_records/.. && chmod 755 activation_records'
-SshC 'cd /mnt2/containers/Data/System/*/Library/activation_records/.. && chmod 0664 activation_records/activation_record.plist'
-SshC '/bin/mv -f /mnt6/$(cat /mnt6/active)/usr/local/standalone/firmware/Baseband /mnt6/$(cat /mnt6/active)/usr/local/standalone/firmware/Baseband2'
-SshC '/sbin/reboot'
+sshpass -p 'alpine' scp -p ./activation_files/activation_record.plist root@localhost:"/private/var/mobile/"
+sshpass -p 'alpine' scp -p ./activation_files/IC-Info.sisv root@localhost:"/private/var/mobile/"
+SshC 'mv -f /private/var/mobile/activation_record.plist /private/var/mobile/'
+SshC 'rm -rf /private/var/mobile/Library/FairPlay'
+SshC 'mkdir -p -m 00755 /private/var/mobile/Library/FairPlay/iTunes_Control/iTunes'
+SshC 'mv -f /private/var/mobile/IC-Info.sisv /private/var/mobile/'
+SshC 'mv -f /private/var/mobile/IC-Info.sisv /private/var/mobile/Library/FairPlay/iTunes_Control/iTunes/'
+SshC 'chmod 00664 /private/var/mobile/Library/FairPlay/iTunes_Control/iTunes/IC-Info.sisv'
+SshC '/usr/sbin/chown -R mobile:mobile /private/var/mobile/Library/FairPlay'
+SshC 'cd /private/var/containers/Data/System/*/Library/internal/../ && mkdir -p activation_records'
+SshC 'cd /private/var/containers/Data/System/*/Library/activation_records && mv -f /private/var/root/activation_record.plist ./'
+SshC 'cd /private/var/containers/Data/System/*/Library/activation_records/.. && chmod 755 activation_records'
+SshC 'cd /private/var/containers/Data/System/*/Library/activation_records/.. && chmod 0664 activation_records/activation_record.plist'
+SshC 'kill 1'
 
 # Confirmation message
 read -p 'SUCCESS BYPASSED DEVICE'
