@@ -1,6 +1,6 @@
 # BYPASS-HELLO-NO-NEED-CHANGE-SN
 BASH SCRIPT FOR GENERATE ACTIVATION AND ACTIVATE NO NEED CHANGE SERIAL
-use curl or activation from libimobile device then handle this request :
+use wget and ideviceactivation from libimobile device then handle this request :
 
 USE LIBMOBILEDEVICE : --> ideviceactivation module
 
