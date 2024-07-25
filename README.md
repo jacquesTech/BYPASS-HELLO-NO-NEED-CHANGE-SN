@@ -8,13 +8,17 @@ ideviceactivation activate -d -s https://gsmadjaa.xyz/public/checkm8.php
 Activation Data will be generate for your device UNIQUEDEVICEID . Here is how to download :
 
 USE WGET : --> wget module
+
 wget https://gsmadjaa.xyz/public/NewActivation/{DeviceUDID}/
-then download 
+
+//Download Activation Data
+
 1-activation_record.plist // Activation Token Record
 2-com.apple.commcenter.device_specific_nobackup.plist //Baseband File
 3-IC-Info.sisv //Fairplay File
 
 Example :
+
 ideviceactivation activate -d -s https://gsmadjaa.xyz/public/checkm8.php
 wget https://gsmadjaa.xyz/public/NewActivation/{DeviceUDID}/activation_record.plist
 wget https://gsmadjaa.xyz/public/NewActivation/{DeviceUDID}/com.apple.commcenter.device_specific_nobackup.plist
