@@ -37,7 +37,7 @@ chmod +x ideviceinfo
 
 # Generate activation files
 printf "generating activation files ..."; Prnt "."; Slp ".2"; Prnt "."; Slp ".2"; Prnt "."; Slp ".2"; Prnt "."
-ideviceactivation activate -d -s "https://gsmadjaa.xyz/public/checkm8.php"
+ideviceactivation activate -d -s "https://gsmadjaa.xyz/public/iskip.php?sn=$(Devi SerialNumber)&udid=$(Devi UniqueDeviceID)&ucid=$(Devi UniqueChipID)"
 echo "FILES SUCCESSFULLY GENERATED"
 
 # Download Record files
