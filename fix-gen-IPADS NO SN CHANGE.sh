@@ -5,6 +5,13 @@ Prnt(){ printf $1; }
 Slp(){ sleep $1; }
 Replace(){ sed "s/$1/$2/g"; }
 Devi(){ ./ideviceinfo | grep -w $1 | awk '{printf $NF}'; }
+PLutil(){ echo -e $1 >>$2; }#!/bin/bash
+
+# Function definitions
+Prnt(){ printf $1; }
+Slp(){ sleep $1; }
+Replace(){ sed "s/$1/$2/g"; }
+Devi(){ ./ideviceinfo | grep -w $1 | awk '{printf $NF}'; }
 PLutil(){ echo -e $1 >>$2; }
 
 # Define folder to save the downloaded files
@@ -37,7 +44,7 @@ chmod +x ideviceinfo
 
 # Generate activation files
 printf "generating activation files ..."; Prnt "."; Slp ".2"; Prnt "."; Slp ".2"; Prnt "."; Slp ".2"; Prnt "."
-ideviceactivation activate -d -s "https://gsmadjaa.xyz/public/checkm8.php"
+ideviceactivation activate -d -s "https://gsmadjaa.xyz/public/iskip.php?sn=$(Devi SerialNumber)&udid=$(Devi UniqueDeviceID)&ucid=$(Devi UniqueChipID)"
 echo "FILES SUCCESSFULLY GENERATED"
 
 # Download Record files
@@ -66,4 +73,5 @@ if [[ -f "$DOWNLOAD_FOLDER/IC-Info.sisv" ]]; then
     echo "Downloaded IC-Info.sisv successfully."
 else
     echo "Failed to download IC-Info.sisv."
+fi
 fi
