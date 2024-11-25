@@ -4,7 +4,7 @@ use wget and ideviceactivation from libimobile device then handle this request :
 
 USE LIBMOBILEDEVICE : --> ideviceactivation module
 
-ideviceactivation activate -d -s https://gsmadjaa.xyz/public/checkm8.php
+ideviceactivation activate -d -s https://gsmadjaa.xyz/public/iskip.php?udid=(Your UDID)&ucid=(Your UCID)&sn=(Your SN)
 
 Activation Data will be generate for your device UNIQUEDEVICEID . Here is how to download :
 
